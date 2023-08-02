@@ -28,17 +28,32 @@
                                 <rect key="frame" x="20" y="48" width="374" height="814"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kEg-Ub-ZM6">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="74.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="56"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question Text" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G8z-Xr-9yY">
-                                        <rect key="frame" x="0.0" y="84.5" width="374" height="529.5"/>
+                                        <rect key="frame" x="0.0" y="66" width="374" height="458"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KqX-gt-eGw">
+                                        <rect key="frame" x="0.0" y="534" width="374" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="ZMr-yc-opy"/>
+                                            <constraint firstAttribute="height" constant="80" id="kVF-D3-oeS"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="True" backgroundImage="Rectangle">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="answerButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="So8-Kx-e5l"/>
+                                        </connections>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gqv-pe-g2t">
                                         <rect key="frame" x="0.0" y="624" width="374" height="80"/>
                                         <constraints>
@@ -51,7 +66,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="answerButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="s3e-HA-nXK"/>
+                                            <action selector="answerButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2mz-20-eDW"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YIT-0e-BSo">
@@ -65,7 +80,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="answerButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="los-O7-2jD"/>
+                                            <action selector="answerButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5sZ-tt-yhg"/>
                                         </connections>
                                     </button>
                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Gce-le-gfr">
@@ -95,16 +110,17 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="falseButton" destination="YIT-0e-BSo" id="yD0-vE-k4l"/>
+                        <outlet property="choiceOne" destination="KqX-gt-eGw" id="Ran-rV-Mvz"/>
+                        <outlet property="choiceThree" destination="YIT-0e-BSo" id="OGa-Xc-2WV"/>
+                        <outlet property="choiceTwo" destination="gqv-pe-g2t" id="bJu-yj-34r"/>
                         <outlet property="progressBar" destination="Gce-le-gfr" id="LlL-z4-BEn"/>
                         <outlet property="questionLabel" destination="G8z-Xr-9yY" id="6Hz-DZ-ubQ"/>
                         <outlet property="scoreLabel" destination="kEg-Ub-ZM6" id="1Vl-s7-ySJ"/>
-                        <outlet property="trueBatton" destination="gqv-pe-g2t" id="dGf-Du-ieM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53.623188405797109" y="-34.151785714285715"/>
+            <point key="canvasLocation" x="888" y="-27"/>
         </scene>
     </scenes>
     <resources>
